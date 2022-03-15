@@ -3,6 +3,10 @@
 # usvp
 
 
+[Experiment evaluation in Computer Vision](https://mjirik.github.io/usvp/slides/experiment_evaluation_in_computer_vision.slides.html)
+
+[Data is all you need](https://mjirik.github.io/usvp/slides/data_is_all_you_need.slides.html)
+
 
 # Build the slides
 
