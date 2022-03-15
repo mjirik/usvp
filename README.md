@@ -31,6 +31,7 @@ git submodule add https://github.com/hakimel/reveal.js.git reveal.js
 
 ```shell
 jupyter-nbconvert --to slides slides/experiment_evaluation_in_computer_vision.ipynb --reveal-prefix=../reveal.js 
+jupyter-nbconvert --to slides slides/data_is_all_you_need.ipynb --reveal-prefix=../reveal.js 
 ```
 
 ```shell
@@ -42,6 +43,13 @@ jupyter-nbconvert --to slides slides/Tasks_in_Computer_Vision.ipynb --reveal-pre
 jupyter nbconvert --to slides slides/Tasks_in_Computer_Vision.ipynb --reveal-prefix=../reveal.js --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_theme="sky" --SlidesExporter.reveal_header="<H1>cat.jpg</H1>"
 ```
 
+jupyter-nbconvert --to latex slides\data_is_all_you_need.ipynb --reveal-prefix=../reveal.js
+
+
 ## Push to github
 
+
+```shell
+git push
+```
 

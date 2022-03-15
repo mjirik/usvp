@@ -14602,7 +14602,7 @@ $$<p><img src="Accuracy.png" alt="accuracy"></p>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Precision,-Recall=Sensitivity,-Specificity">Precision, Recall=Sensitivity, Specificity<a class="anchor-link" href="#Precision,-Recall=Sensitivity,-Specificity">&#182;</a></h2><p><img src="precisionrecall_horizontal.png" alt="precision_recall"></p>
+<h2 id="Precision,-Recall=Sensitivity,-Specificity">Precision, Recall=Sensitivity, Specificity<a class="anchor-link" href="#Precision,-Recall=Sensitivity,-Specificity">&#182;</a></h2><p><img src="Precisionrecall_horizontal.png" alt="precision_recall"></p>
 
 </div>
 </div><aside class="notes">
@@ -15152,9 +15152,9 @@ $$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Dice-coefficient">Dice coefficient<a class="anchor-link" href="#Dice-coefficient">&#182;</a></h3>$$
 DICE = \frac{2\left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|}{\left|{S_{g}^{1}}\right| + \left|{S_{t}^{1}}\right|} = \frac{2 TP}{2 TP + FP + FN}
-$$<p>Jaccard index is always larger than DICE except at the extrema {0,1} where they are equal. Furthermore the two metrics are related according to</p>
+$$<p>IoU (Jaccard index) is always larger than DICE except at the extrema {0,1} where they are equal. Furthermore the two metrics are related according to</p>
 $$
-JAC=\frac{\left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|}{\left|{S_{g}^{1}} \cup {S_{t}^{1}}\right|}=\frac{2\left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|}{2\left(\left|{S_{g}^{1}}\right|+\left|{S_{t}^{1}}\right|- \left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|\right)} =\frac{DICE}{2-DICE}
+IoU=\frac{\left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|}{\left|{S_{g}^{1}} \cup {S_{t}^{1}}\right|}=\frac{2\left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|}{2\left(\left|{S_{g}^{1}}\right|+\left|{S_{t}^{1}}\right|- \left|{S_{g}^{1}} \cap {S_{t}^{1}}\right|\right)} =\frac{DICE}{2-DICE}
 $$
 </div>
 </div></section></section><section><section>
@@ -15186,11 +15186,10 @@ $$
 <li>Bounding box and class label for each object</li>
 </ul>
 <p>Metrics:</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Intersection over Union (Jaccard index)</li>
+<li>Dice coefficient</li>
+</ul>
 
 </div>
 </div></div></section></section><section><section>
@@ -15225,7 +15224,7 @@ Pro segmentaci se využívá znalost o řešeném problému
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;_bp5LTQ9D0M&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
@@ -15244,7 +15243,7 @@ Pro segmentaci se využívá znalost o řešeném problému
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15276,28 +15275,28 @@ Pro segmentaci se využívá znalost o řešeném problému
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Semantic-Segmentation">Semantic Segmentation<a class="anchor-link" href="#Semantic-Segmentation">&#182;</a></h2><p><img src="https://www.researchgate.net/publication/326875064/figure/fig3/AS:659518916681730@1534252971987/Example-of-2D-semantic-segmentation-Top-input-image-Bottom-prediction.png" alt="semantic-segmentation"></p>
+<h2 id="Semantic-Segmentation">Semantic Segmentation<a class="anchor-link" href="#Semantic-Segmentation">&#182;</a></h2><p><img src="https://www.researchgate.net/publication/326875064/figure/fig3/AS:659518916681730@1534252971987/Example-of-2D-semantic-segmentation-Top-input-image-Bottom-prediction.png" width="700" /></p>
 <p>Source: <a href="https://doi.org/10.3390/s18082571">Jeong, J.; Yoon, T.S.; Park, J.B. Towards a Meaningful 3D Map Using a 3D Lidar and a Camera. Sensors 2018, 18, 2571.</a></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://www.jeremyjordan.me/content/images/2018/05/deeplabcityscape.gif" alt="semantic-segmentation"></p>
+<p><img src="https://www.jeremyjordan.me/content/images/2018/05/deeplabcityscape.gif" width="700"/></p>
 <p>Source: <a href="https://www.jeremyjordan.me/semantic-segmentation/">An overview of semantic image segmentation by Jeremy Jordan</a> and <a href="https://www.youtube.com/watch?v=ATlcEDSPWXY">YouTube</a></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Semantic-segmentation:-U-Net">Semantic segmentation: U-Net<a class="anchor-link" href="#Semantic-segmentation:-U-Net">&#182;</a></h3><p><img src="https://camo.githubusercontent.com/d55a437337d0e08c6a082714959253d80b81ce4e6c18e94688d9aff16e3bf2f8/68747470733a2f2f6c6d622e696e666f726d6174696b2e756e692d66726569627572672e64652f70656f706c652f726f6e6e656265722f752d6e65742f752d6e65742d6172636869746563747572652e706e67" alt="U-Net"></p>
+<h3 id="Semantic-segmentation:-U-Net">Semantic segmentation: U-Net<a class="anchor-link" href="#Semantic-segmentation:-U-Net">&#182;</a></h3><p><img src="https://camo.githubusercontent.com/d55a437337d0e08c6a082714959253d80b81ce4e6c18e94688d9aff16e3bf2f8/68747470733a2f2f6c6d622e696e666f726d6174696b2e756e692d66726569627572672e64652f70656f706c652f726f6e6e656265722f752d6e65742f752d6e65742d6172636869746563747572652e706e67" width="700"/></p>
 <p><a href="https://doi.org/10.1007/978-3-319-24574-4_28">Ronneberger, O., P.Fischer, &amp; Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. Medical Image Computing and Computer-Assisted Intervention (MICCAI), 9351, 234–241. http://lmb.informatik.uni-freiburg.de/Publications/2015/RFB15a</a></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Instance-Segmentation">Instance Segmentation<a class="anchor-link" href="#Instance-Segmentation">&#182;</a></h2><p><img src="https://www.researchgate.net/profile/Samuel-Van-Ackere/publication/337673123/figure/fig43/AS:831567765188614@1575272613523/4-Difference-between-classification-and-localisation-object-detection-semantic.jpg" alt="s"></p>
+<h2 id="Instance-Segmentation">Instance Segmentation<a class="anchor-link" href="#Instance-Segmentation">&#182;</a></h2><p><img style="height:500px" src="https://www.researchgate.net/profile/Samuel-Van-Ackere/publication/337673123/figure/fig43/AS:831567765188614@1575272613523/4-Difference-between-classification-and-localisation-object-detection-semantic.jpg" /></p>
 
 </div>
 </div></section></section><section><section>
@@ -15318,24 +15317,37 @@ Pro segmentaci se využívá znalost o řešeném problému
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Segmentation---evaluation">Segmentation - evaluation<a class="anchor-link" href="#Segmentation---evaluation">&#182;</a></h2><p>Per pixel (voxel)</p>
 <ul>
-<li>Jaccard index (IoU)
+<li>Intesection over Union (Jaccard index)
 $$
-JAC=\frac{\left|{A} \cap {B}\right|}{\left|{A} \cup {B}\right|}
+IoU = \frac{\left|{A} \cap {B}\right|}{\left|{A} \cup {B}\right|}
 $$</li>
+</ul>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li>Dice coefficient
 $$
 DICE = \frac{2\left|{A} \cap {B}\right|}{\left|{A}\right| + \left|{B}\right|} = \frac{2 TP}{2 TP + FP + FN}
 $$</li>
-<li><p>Pixel Accuracy
-$$
-\textrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-$$</p>
-<p>Pixel Accuracy can sometimes provide misleading results when the class representation is small within the image, as the measure will be biased in mainly reporting how well you identify negative case (ie. where the class is not present).</p>
-</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Pixel Accuracy
+$$
+\textrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+$$
+Pixel Accuracy can sometimes provide misleading results when the class representation is small within the image, as the measure will be biased in mainly reporting how well you identify negative case (ie. where the class is not present).</li>
+</ul>
+
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="sliver_metodics_all.png" alt="sliver_metodics"></p>
@@ -15626,6 +15638,24 @@ Taken from "Unsupervised Representation Learning with Deep Convolutional Generat
 <p><img src="lynx_lynx.jpeg" alt="lynx"></p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://lh3.googleusercontent.com/juF-2r6lR2HJygYebXlzXHWs5R7LmPtstjOnA9L2xNSbszVvRDf_ppC2vlQuQ1St2hiOC3gJfIy5KWm_ivOEL1tGm_ZfTyjLBzuYEZHSiq1fQz7_OH3f4bbo21YxvyjVP30ktwvYvbAa_xAYZ5iQOcshbSJ6rLLDT8cO7lJM8tcbgoD2ARKK9QJCAn4zZVHUVGHT6nvbMTEbDMDCUzsnYQuSZMFwx-DUwuOu78m8AogIR5M6hVoVI0TRj_nrPVYUqFPWE4QKr8UKDdrsz4OMVDqy-xhv-jCoXDu9CngaRam-fxHekzQ-qejV8IAmD24B_H9frKsAgH_GAUhyoYo-_HlpLcU-afaJnbH48hsj73P1y9dtPK51tzA0qok5JbS-_aACA2sGIqbGxATxMd2L9-POqT2EcD8NELyS1V9kQkQrDtYl1aNvh8jpj2T945thfJ6tRNNJh6J7sSeZsulPY-7uEZG73FA2m-DCumh7YB1hHsOGGdIr8XPWCtbWvU9lyh3c-dMScGlhkOXhTGUf8qF-sZl4NyqOOKOHHM3RV6fnRp_6GYeij3MzTqHzpU7gZ9q4isweOl7g5c6RV3FqtbgWTl7PcnvoG8WfJT-wzT5ApkcGMcRhA0ourFjdpp6HDhM9i4cyRaAGCigm91LkoB764RBz-QBP9uaQDAnu69hnxypSpXAtY6J-TBvYRAFkxxNM6CMnKct7rk8rE4MQiRBc=w1214-h910-no?authuser=0"/></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://lh3.googleusercontent.com/0Yg9VYn-vN7DkVKNQRJlOBui6-UXkwX-aiVFZJmXtTKsWplIqBqdd-cQ8Lnp2tdTjM9qSh1YlaN6SW1FWZk15UlKt4nkifajNF3u42DbVC5eK0vYRHSfrdqwuFWOuP8AUTpEM2fuxbzpHTj1Uodr33T5VJVhJYD-QVmW-Z02USNeZisjJJW7DATiDECgfMQos6Mkn0zyeRQ93HVZLniuCqJ-RmnIRTsuBbsVJpacwUIVgJYS4JX3o29xJz9x5P0KYMafER5Km3H5JkbAndPhVFuanIMHZEX5w5xdcrcRuIKaHEPS0dTuAT_vpLo4RaG6UfbP1qFOqCcg_7i0L0AgbZeIDGCBuIcpa0uWVLx5l2JZDFs2npCVTOi-rAa7Helyoew0KyyGmap4D7wppL1q-0Mio5Do7-kaEpDu24O1fmX841ojxKdIJ7g6kad1tlD5dFuRf0ukvk3a7vuw9t7s7z5RlomAX0KuoAI-5Uzr6Igw-qkWrErRi3EOTdddbA9UJigP546AwHaYqx_6w_7nvhxz-jcyr8y62vrWU97kt50hCmsxJkBjEhSPIJIea3n6Fx80B1H3W5U2OyH36j9_0_9xFKHAYri23GTu5Ob-E-JXD8Pa5TDPPn8Ucn16dcx2LtDReGUBJ2qsPoeCj7fYwA9PJFti9QHVOtr2wz-07wBjvPbyToTujj7iT7NJXk9vtLdiMdDiMlEqMjv-kiciyZV9=w1542-h868-no?authuser=0"/></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="https://lh3.googleusercontent.com/eD5km0q3ZhXg9ICqsYYfvrVPbghCrkP7LMLBsmnsJeWtnkOrKpcdqEY-ORHx7wQDqvio53WIMzYE533PQR_-GTxNm5uK3dnq0e_gxGsmzil7V6-nUMwxCqeC4S2Pwes95LAVcI69WKCZXY8G2YtoMfHzWg-ug1YTH021s0lFGro0KcHxnq9Mot5gTJtNLJHljiLL9eynrRbonUkv5I1UxydgxJNKyJSpO2Dds6VEgPhiM9RQBKccHCXB55NHbeHSBi7LFgzv8eWiPPCIWlSZQMhpt9U4i9HtYY7AS40s61XwntmZS8XAvwbvb_oDv6tssnqCI9xFqQjRECimUiqH7tTtokxa--vSsnN-dUxFgiYP6x2i4PlE2qMhZkYGSrWai0UCWMR8xnK2qsYqefvKC7v59o2VUmfVZtMBvuBAN5Aojg3ppD4ipJFhsGlFvXdiDCo5WvBHeezts1uVilG8J_edBQO28w2cv5S1Xdrm5HB-Z-O3HEc7M6oa5l0c_eQZqYcuByfauZeRuivcudQ4NaVCpbvqLiEOt8nT6hKDINFLTkAm_LCE5uO5ljnachAave9VUhTsJ73h3k7YY-B-90bh7CSDkIszbT7mPLU7peCoJ3hXz62FoEfaP9yubVH57xE8uoCPNS2ngRsQz9O0rRMZL00rGRj2j-JUcDDgiXesJAnAp11X-LRMB0meXO7-5pGDClYo7AC56_k4ilNaPq3t=w1542-h868-no?authuser=0"/></p>
+
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15634,20 +15664,6 @@ Taken from "Unsupervised Representation Learning with Deep Convolutional Generat
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
