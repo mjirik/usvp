@@ -16,7 +16,7 @@ git submodule add https://github.com/hakimel/reveal.js.git reveal.js
 ```
 
 ```shell
-jupyter-nbconvert --to slides slides/Tasks_in_Computer_Vision.ipynb --reveal-prefix=../reveal.js 
+jupyter-nbconvert --to slides slides/experiment_evaluation_in_computer_vision.ipynb --reveal-prefix=../reveal.js 
 ```
 
 ```shell
