@@ -14101,7 +14101,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Data-is-all-you-need">Data is all you need<a class="anchor-link" href="#Data-is-all-you-need">&#182;</a></h1><h2 id="Miroslav--Ji%C5%99%C3%ADk">Miroslav  Ji&#345;&#237;k<a class="anchor-link" href="#Miroslav--Ji%C5%99%C3%ADk">&#182;</a></h2>
 </div>
-</div>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Goal">Goal<a class="anchor-link" href="#Goal">&#182;</a></h1><ul>
@@ -14112,7 +14112,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="How-to-split-dataset">How to split dataset<a class="anchor-link" href="#How-to-split-dataset">&#182;</a></h1><h2 id="Training-Dataset">Training Dataset<a class="anchor-link" href="#Training-Dataset">&#182;</a></h2><p>Training Dataset: The sample of data used to fit the model.
@@ -14187,15 +14187,13 @@ The actual dataset that we use to train the model (weights and biases in the cas
 
 </div>
 
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span>
 </pre></div>
 
@@ -14233,13 +14231,225 @@ The actual dataset that we use to train the model (weights and biases in the cas
 
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
 <li><a href="https://towardsdatascience.com/train-validation-and-test-sets-72cb40cba9e7">Train, validation and test sets</a></li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">scikit-learn</a></li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Datasets">Datasets<a class="anchor-link" href="#Datasets">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="MNIST">MNIST<a class="anchor-link" href="#MNIST">&#182;</a></h2><p>The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/MnistExamples.png/320px-MnistExamples.png" alt="mnist"></p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="References">References<a class="anchor-link" href="#References">&#182;</a></h3><ul>
+<li>Kussul, Ernst; Baidyk, Tatiana (2004). "Improved method of handwritten digit recognition tested on MNIST database". Image and Vision Computing. 22 (12): 971–981. <a href="doi:10.1016/j.imavis.2004.03.008">doi:10.1016/j.imavis.2004.03.008</a> .</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="ImageNet">ImageNet<a class="anchor-link" href="#ImageNet">&#182;</a></h1><p>The most highly-used subset of ImageNet is the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) 2012-2017 image classification and localization dataset. This dataset spans 1000 object classes and contains 1,281,167 training images, 50,000 validation images and 100,000 test images. This subset is available on Kaggle.</p>
+<p><img src="https://www.researchgate.net/profile/Tengqi-Ye/publication/324797660/figure/fig17/AS:619962838315022@1524822067263/Figure-A1-A-snapshot-of-two-root-to-leaf-branches-of-ImageNet-the-top-row-is-from-the.png" alt="tengi"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>On 30 September 2012, a convolutional neural network (CNN) called AlexNet achieved a top-5 error of 15.3% in the ImageNet 2012 Challenge, more than 10.8 percentage points lower than that of the runner up. This was made feasible due to the use of graphics processing units (GPUs) during training, an essential ingredient of the deep learning revolution. According to The Economist, "Suddenly people started to pay attention, not just within the AI community but across the technology industry as a whole."</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
+<li>J. Deng, W. Dong, R. Socher, L. -J. Li, Kai Li and Li Fei-Fei, "ImageNet: A large-scale hierarchical image database," 2009 IEEE Conference on Computer Vision and Pattern Recognition, 2009, pp. 248-255, doi: <a href="https://doi.org/10.1109/CVPR.2009.5206848">10.1109/CVPR.2009.5206848</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/ImageNet">Wikipedia: ImageNet</a></li>
+<li>Krizhevsky, Alex; Sutskever, Ilya; Hinton, Geoffrey E. (June 2017). "ImageNet classification with deep convolutional neural networks" (PDF). Communications of the ACM. 60 (6): 84–90. <a href="https://doi.org/10.1145%2F3065386">doi:10.1145/3065386</a>. ISSN 0001-0782. S2CID 195908774. Retrieved 24 May 2017.</li>
+<li><a href="http://dx.doi.org/10.13140/RG.2.2.18463.46248">Ye Tengqi, "Visual Object Detection from Lifelogs using Visual Non-lifelog Data"</a></li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="COCO">COCO<a class="anchor-link" href="#COCO">&#182;</a></h2><ul>
+<li>Object segmentation</li>
+<li>Recognition in context</li>
+<li>Superpixel stuff segmentation</li>
+<li>330K images (&gt;200K labeled)</li>
+<li>1.5 million object instances</li>
+<li>80 object categories</li>
+<li>91 stuff categories</li>
+<li>5 captions per image</li>
+<li>250,000 people with keypoints</li>
+</ul>
+<p><img src="https://cocodataset.org/images/coco-examples.jpg" alt="coco"></p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="non-iconic_coco.png" width=800/></p>
+<p>Source: Microsoft COCO: Common Objects in Context</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="COCO-json">COCO json<a class="anchor-link" href="#COCO-json">&#182;</a></h2><p>COCO format JSON file consists of five sections providing information for an entire dataset. For more information, see COCO format.</p>
+<ul>
+<li>info – general information about the dataset.</li>
+<li>licenses – license information for the images in the dataset.</li>
+<li>images – a list of images in the dataset.</li>
+<li>annotations – a list of annotations (including bounding boxes) that are present in all images in the dataset.</li>
+<li>categories – a list of label categories.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;info&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nf</span><span class="err">o</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">image</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">a</span><span class="kc">nn</span><span class="err">o</span><span class="kc">tat</span><span class="err">io</span><span class="kc">n</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;licenses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">lice</span><span class="kc">nse</span><span class="p">],</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="err">i</span><span class="kc">nf</span><span class="err">o</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;contributor&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;date_created&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">da</span><span class="kc">tet</span><span class="err">ime</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="err">image</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;flickr_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;coco_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;date_captured&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">da</span><span class="kc">tet</span><span class="err">ime</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="err">lice</span><span class="kc">nse</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COCO 2017 Dataset&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://cocodataset.org&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2017</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;contributor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COCO Consortium&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;date_created&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2017/09/01&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;licenses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://creativecommons.org/licenses/by/2.0/&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attribution License&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">242287</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;coco_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://images.cocodataset.org/val2017/xxxxxxxxxxxx.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;flickr_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://farm3.staticflickr.com/2626/xxxxxxxxxxxx.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">426</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xxxxxxxxx.jpg&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;date_captured&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2013-11-15 02:41:42&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">245915</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;coco_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://images.cocodataset.org/val2017/nnnnnnnnnnnn.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;flickr_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://farm1.staticflickr.com/88/xxxxxxxxxxxx.jpg&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nnnnnnnnnn.jpg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;date_captured&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2013-11-18 02:53:27&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">125686</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;category_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;iscrowd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;segmentation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">164.81</span><span class="p">,</span><span class="w"> </span><span class="mf">417.51</span><span class="p">,</span><span class="err">......</span><span class="mf">167.55</span><span class="p">,</span><span class="w"> </span><span class="mf">410.64</span><span class="p">]],</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;image_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">242287</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;area&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">42061.80340000001</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;bbox&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">19.23</span><span class="p">,</span><span class="w"> </span><span class="mf">383.18</span><span class="p">,</span><span class="w"> </span><span class="mf">314.5</span><span class="p">,</span><span class="w"> </span><span class="mf">244.46</span><span class="p">]},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1409619</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;category_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;iscrowd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;segmentation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">376.81</span><span class="p">,</span><span class="w"> </span><span class="mf">238.8</span><span class="p">,</span><span class="err">........</span><span class="mf">382.74</span><span class="p">,</span><span class="w"> </span><span class="mf">241.17</span><span class="p">]],</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;image_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">245915</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;area&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3556.2197000000015</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;bbox&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">399</span><span class="p">,</span><span class="w"> </span><span class="mi">251</span><span class="p">,</span><span class="w"> </span><span class="mi">155</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">]},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1410165</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;category_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;iscrowd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;segmentation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">486.34</span><span class="p">,</span><span class="w"> </span><span class="mf">239.01</span><span class="p">,</span><span class="err">..........</span><span class="mf">495.95</span><span class="p">,</span><span class="w"> </span><span class="mf">244.39</span><span class="p">]],</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;image_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">245915</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;area&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1775.8932499999994</span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">&quot;bbox&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">86</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">334</span><span class="p">]}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;supercategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;speaker&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="nt">&quot;supercategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;speaker&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo dot&quot;</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Resources">Resources<a class="anchor-link" href="#Resources">&#182;</a></h2><ul>
+<li><a href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-10602-1_48.pdf">Paper: "Microsoft COCO: Common Objects in Context"</a></li>
+<li><a href="https://cocodataset.org/#format-data">COCO json format</a></li>
+<li><a href="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/md-transform-coco.html">Transforming COCO datasets</a></li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Few-other-datasets...">Few other datasets...<a class="anchor-link" href="#Few-other-datasets...">&#182;</a></h1>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Skin-cancer-dataset-HAM10000">Skin cancer dataset HAM10000<a class="anchor-link" href="#Skin-cancer-dataset-HAM10000">&#182;</a></h2><p><img src="https://www.researchgate.net/publication/341264074/figure/fig1/AS:889106708058114@1588990966693/Examples-of-images-downloaded-from-the-HAM10000-dataset-These-images-are-publicly.png" width=600></p>
+<p>Examples of images downloaded from the HAM10000 dataset. These images are publicly available through the International Skin Imaging Collaboration (ISIC) archive and represent more than 95% of all pigmented lesions encountered during clinical practice (Tschandl P 2018). (A) Melanocytic nevus; (B) Bening keratosis; (C) Vascular lesion; (D) Dermatofibroma; (E) Intraepithelial carcinoma; (F) Basal cell carcinoma; (G) Melanoma. Legends inside each image represents clinical data such as age, sex and localization associated to the image. F: female; M: male; LE: lower extremity; B: back; H: Hand; T: trunk.</p>
+<p>Source: <a href="https://doi.org/10.3390/diagnostics10110969">Deep Neural Frameworks Improve the Accuracy of General Practitioners in the Classification of Pigmented Skin Lesions</a></p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Liver-Segmentation-3D-IRCADb-01">Liver Segmentation 3D-IRCADb-01<a class="anchor-link" href="#Liver-Segmentation-3D-IRCADb-01">&#182;</a></h2><p><img src="https://www.ircad.fr/wp-content/uploads/3Dircadb1_package.jpeg" alt="ircad"></p>
+<p><a href="https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/">IRCADb</a></p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Annotation-tools">Annotation tools<a class="anchor-link" href="#Annotation-tools">&#182;</a></h1>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="CVAT">CVAT<a class="anchor-link" href="#CVAT">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Cvat_%282%29.jpg/450px-Cvat_%282%29.jpg" alt="cvat"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Via-annotation-tool">Via annotation tool<a class="anchor-link" href="#Via-annotation-tool">&#182;</a></h2><p><img src="https://www.robots.ox.ac.uk/~vgg/software/via/images/via_video_annotator.png" alt="via"></p>
+<p><a href="https://www.robots.ox.ac.uk/~vgg/software/via/">via annotation tool</a></p>
 
 </div>
 </div></section></section><section><section>
@@ -14270,7 +14480,7 @@ The actual dataset that we use to train the model (weights and biases in the cas
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Deep-learning">Deep learning<a class="anchor-link" href="#Deep-learning">&#182;</a></h2><p><a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a></p>
@@ -14278,7 +14488,7 @@ The actual dataset that we use to train the model (weights and biases in the cas
 <p><a href="https://github.com/mjirik/tutorials/tree/main/detectron_windows">Detetron2 on Windows</a></p>
 
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
@@ -14286,7 +14496,7 @@ The actual dataset that we use to train the model (weights and biases in the cas
 </ul>
 
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Metacentrum">Metacentrum<a class="anchor-link" href="#Metacentrum">&#182;</a></h1><p><a href="https://wiki.metacentrum.cz/wiki/Beginners_guide">Beginners Guide</a></p>
